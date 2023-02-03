@@ -6,7 +6,7 @@ SRC = get_next_line.c \
 	main.c
 SRC_STDIN = get_next_line.c \
 	get_next_line_utils.c \
-	main.c
+	main_stdin.c
 SRC_B = get_next_line_bonus.c \
 	get_next_line_utils_bonus.c \
 	main_bonus.c
