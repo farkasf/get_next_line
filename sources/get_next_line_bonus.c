@@ -6,7 +6,7 @@
 /*   By: ffarkas <ffarkas@student.42prague.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 02:30:41 by ffarkas           #+#    #+#             */
-/*   Updated: 2023/02/03 04:30:37 by ffarkas          ###   ########.fr       */
+/*   Updated: 2023/02/03 05:32:40 by ffarkas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_next(char *buffer)
 {
 	int	i;
 	int	j;
-	char	*line;
+	char	*next_line;
 
 	i = 0;
 	while (buffer[i] && buffer[i] != '\n')
@@ -26,16 +26,16 @@ char	*ft_next(char *buffer)
 		free(buffer);
 		return (NULL);
 	}
-	line = (char*)malloc((ft_strlen(buffer) - i + 1) * sizeof(char));
-	if (line == 0)
+	next_line = (char*)malloc((ft_strlen(buffer) - i + 1) * sizeof(char));
+	if (next_line == 0)
 		return (0);
 	i++;
 	j = 0;
 	while (buffer[i])
-		line[j++] = buffer[i++];
-	line[j] = '\0';
+		next_line[j++] = buffer[i++];
+	next_line[j] = '\0';
 	free(buffer);
-	return (line);
+	return (next_line);
 }
 
 char	*ft_line(char *buffer)
