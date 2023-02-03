@@ -6,7 +6,7 @@
 /*   By: ffarkas <ffarkas@student.42prague.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 02:39:35 by ffarkas           #+#    #+#             */
-/*   Updated: 2023/02/03 17:29:42 by ffarkas          ###   ########.fr       */
+/*   Updated: 2023/02/03 17:59:54 by ffarkas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,8 @@ char	*ft_strjoin(char *s1, char *s2)
 
 	if (s1 == 0)
 		s1 = ft_calloc(1, 1);
+	if (s1 == 0)
+		return (NULL);
 	if (s2 == 0)
 		return (NULL);
 	str = (char *)malloc((ft_strlen(s1) + ft_strlen(s2) + 1) * sizeof(char));
