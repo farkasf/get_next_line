@@ -6,7 +6,7 @@
 /*   By: ffarkas <ffarkas@student.42prague.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 14:09:58 by ffarkas           #+#    #+#             */
-/*   Updated: 2023/02/03 14:10:00 by ffarkas          ###   ########.fr       */
+/*   Updated: 2023/02/03 14:31:42 by ffarkas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ int	main(int ac, char **av)
 	int	i;
 	char	*s;
 	
+	(void)ac;
 	fd1 = open(av[1], O_RDONLY);
 	fd2 = open(av[2], O_RDONLY);
 	fd3 = open(av[3], O_RDONLY);
