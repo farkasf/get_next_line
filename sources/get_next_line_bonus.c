@@ -14,9 +14,9 @@
 
 char	*ft_next(char *buffer)
 {
-	int	i;
-	int	j;
 	char	*next_line;
+	int		i;
+	int		j;
 
 	i = 0;
 	while (buffer[i] && buffer[i] != '\n')
@@ -26,7 +26,7 @@ char	*ft_next(char *buffer)
 		free(buffer);
 		return (NULL);
 	}
-	next_line = (char*)malloc((ft_strlen(buffer) - i + 1) * sizeof(char));
+	next_line = (char *)malloc((ft_strlen(buffer) - i + 1) * sizeof(char));
 	if (next_line == 0)
 		return (0);
 	i++;
@@ -41,14 +41,14 @@ char	*ft_next(char *buffer)
 char	*ft_line(char *buffer)
 {
 	char	*line;
-	int	i;
+	int		i;
 
 	i = 0;
 	if (buffer[i] == 0)
 		return (NULL);
 	while (buffer[i] && buffer[i] != '\n')
 		i++;
-	line = (char*)malloc((i + 2) * sizeof(char));
+	line = (char *)malloc((i + 2) * sizeof(char));
 	if (line == 0)
 		return (NULL);
 	i = 0;
@@ -69,9 +69,9 @@ char	*ft_line(char *buffer)
 char	*ft_read(int fd, char *buffer)
 {
 	char	*read_buffer;
-	int	bytes_read;
+	int		bytes_read;
 
-	read_buffer = (char*)malloc((BUFFER_SIZE + 1) * sizeof(char));
+	read_buffer = (char *)malloc((BUFFER_SIZE + 1) * sizeof(char));
 	if (read_buffer == 0)
 		return (NULL);
 	bytes_read = 1;
@@ -95,7 +95,7 @@ char	*ft_read(int fd, char *buffer)
 char	*get_next_line(int fd)
 {
 	static char	*buffer[2048];
-	char	*line;
+	char		*line;
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
