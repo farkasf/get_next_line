@@ -21,6 +21,7 @@ CC = cc
 INCL = get_next_line.h
 INCL_B = get_next_line_bonus.h
 R = rm -f
+YELLOW = \033[1;33m
 
 all: $(NAME)
 
@@ -45,7 +46,9 @@ fclean: clean
 re: fclean all
 
 test: all
+	@echo "$(YELLOW)>>Testing get_next_line with prometheus.txt ...$(NOC)"
 	./$(NAME) prometheus.txt
 
 test_bonus: bonus
+	@echo "$(YELLOW)>>Testing get_next_line_bonus with file1-3.txt ...$(NOC)"
 	./$(NAME_B) file1.txt file2.txt file3.txt
