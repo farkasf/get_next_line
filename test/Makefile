@@ -18,8 +18,7 @@ OBJS_B = $(SRC_B:.c=.o)
 
 CFLAGS = -Wall -Wextra -Werror -D BUFFER_SIZE=42
 CC = cc
-INCL = get_next_line.h
-INCL_B = get_next_line_bonus.h
+INCL = .
 R = rm -f
 YELLOW = \033[1;33m
 
@@ -34,7 +33,7 @@ stdin:
 	$(CC) $(CFLAGS) $(OBJS_STDIN) -o $(NAME_STDIN)
 
 bonus:
-	$(CC) $(CFLAGS) -c $(SRC_B) -I $(INCL_B)
+	$(CC) $(CFLAGS) -c $(SRC_B) -I $(INCL)
 	$(CC) $(CFLAGS) $(OBJS_B) -o $(NAME_B)
 
 clean:
